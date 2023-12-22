@@ -1,3 +1,28 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components": [
+        "_components/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@routes/*": [
+        "routes/*"
+      ],
+      "@config/*": [
+        "_config/*"
+      ],
+    }
+  },
+  "include": [
+    "./",
+    ".eslintrc.js"
+  ],
+  "exclude": [
+    "node_modules",
+  ],
 }
