@@ -1,8 +1,16 @@
-import { FC, useEffect } from 'react'
-import { Alert, BackHandler, StyleSheet, Text, View } from 'react-native'
+import { FC, Suspense, useEffect } from 'react'
+import { Alert, BackHandler, StyleSheet, View } from 'react-native'
 import { Col, Row } from 'react-native-easy-grid'
-import { TouchableRipple } from 'react-native-paper'
+import { ActivityIndicator, Text, TouchableRipple } from 'react-native-paper'
 import { Outlet, useLocation, useNavigate } from 'react-router-native'
+
+const PageLoader: FC<any> = () => {
+  return (
+    <View style={styles.pageLoader}>
+      <ActivityIndicator animating={true} hidesWhenStopped={false} />
+    </View>
+  )
+}
 
 const Index: FC<any> = () => {
   const navigate: any = useNavigate()
@@ -31,15 +39,21 @@ const Index: FC<any> = () => {
   }, [pathname])
 
   return (
-    <>
-      <View style={styles.container}>
-        <Outlet />
-      </View>
+    <View style={styles.container}>
+      <Suspense fallback={<PageLoader />}>
+        <View style={styles.container}>
+          <Outlet />
+        </View>
+      </Suspense>
+      <View />
       <Row
         style={{
           flexWrap: 'nowrap',
           height: 'auto',
-          backgroundColor: '#fff',
+          backgroundColor: '#eee',
+          alignSelf: 'flex-end',
+          alignItems: 'flex-end',
+          alignContent: 'flex-end',
         }}>
         <Col>
           <TouchableRipple
@@ -83,7 +97,7 @@ const Index: FC<any> = () => {
           </TouchableRipple>
         </Col>
       </Row>
-    </>
+    </View>
   )
 }
 
@@ -92,7 +106,13 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     backgroundColor: '#fff',
     flex: 1,
-    // justifyContent: 'center',
+    justifyContent: 'space-between',
+  },
+  pageLoader: {
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    flex: 1,
+    justifyContent: 'center',
   },
 })
 

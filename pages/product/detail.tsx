@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { StatusBar, StyleSheet, Text, View } from 'react-native'
-import { Button } from 'react-native-paper'
+import { StatusBar, StyleSheet, View } from 'react-native'
+import { Button, Text } from 'react-native-paper'
 import { useNavigate } from 'react-router-native'
 
 const Index: FC<any> = ({ navigation: _ }) => {

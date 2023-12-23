@@ -3,7 +3,6 @@ import { mapRecursive } from '@helpers/index'
 import NavBar from '@pages/navBar'
 import PublicRoutes from '@routes/public'
 import { FC } from 'react'
-import { SafeAreaView, StatusBar, StyleSheet } from 'react-native'
 import { configureFonts, MD3LightTheme, PaperProvider } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/AntDesign'
 import { NativeRouter, Route, Routes } from 'react-router-native'
@@ -18,8 +17,8 @@ const App: FC<any> = ({ navigation: _ }) => {
     fonts: configureFonts({ config: fontConfig }),
   }
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={'dark-content'} />
+    <>
+      {/* <StatusBar barStyle={'dark-content'} /> */}
       <PaperProvider
         theme={paperTheme}
         settings={{
@@ -35,17 +34,14 @@ const App: FC<any> = ({ navigation: _ }) => {
           </Routes>
         </NativeRouter>
       </PaperProvider>
-    </SafeAreaView>
+    </>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  // tabBarStyle: {
-  //   padding: 10,
-  // },
-})
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//   },
+// })
 
 export default App

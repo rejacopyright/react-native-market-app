@@ -72,7 +72,7 @@ export default {
     outline: 'rgb(124, 117, 126)',
     outlineVariant: 'rgb(204, 196, 206)',
     primary: 'rgb(120, 69, 172)',
-    primaryContainer: 'rgb(240, 219, 255)',
+    primaryContainer: 'rgba(240, 219, 255, 0.5)',
     scrim: 'rgb(0, 0, 0)',
     secondary: 'rgb(102, 90, 111)',
     secondaryContainer: 'rgb(237, 221, 246)',

@@ -1,8 +1,10 @@
-import Home from '@pages/home'
-import ProductDetail from '@pages/product/detail'
-import Profile from '@pages/profile'
+// import Home from '@pages/home'
+import { lazy } from 'react'
 import glyphMap from 'react-native-vector-icons/glyphmaps/Ionicons.json'
 
+const ProductDetail: any = lazy(() => import('@pages/product/detail'))
+const Profile: any = lazy(() => import('@pages/profile'))
+const Home: any = lazy(() => import('@pages/home'))
 interface Props {
   component?: any
   icon: {
