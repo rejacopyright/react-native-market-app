@@ -2,7 +2,7 @@ export const productsList = [
   {
     name: 'Lorem ipsum is placeholder',
     descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
-    price: '$100 USD',
+    price: 'Rp. 100.000',
     rating: 3,
     likes: 30,
     sold: 30,
@@ -11,7 +11,7 @@ export const productsList = [
   {
     name: 'Lorem ipsum is placeholder',
     descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
-    price: '$125 USD',
+    price: 'Rp. 850.000',
     rating: 5,
     likes: 30,
     sold: 30,
@@ -20,7 +20,7 @@ export const productsList = [
   {
     name: 'Lorem ipsum is placeholder',
     descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
-    price: '$80 USD',
+    price: 'Rp. 1.250.000',
     rating: 1,
     likes: 30,
     sold: 30,

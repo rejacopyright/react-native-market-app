@@ -10,7 +10,7 @@ import { NativeRouter, Route, Routes } from 'react-router-native'
 
 const App: FC<any> = ({ navigation: _ }) => {
   const fontConfig = {
-    fontFamily: 'Raleway',
+    fontFamily: 'Quicksand-500',
   }
   const paperTheme: any = {
     ...MD3LightTheme,
