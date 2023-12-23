@@ -18,6 +18,8 @@ module.exports = {
           '@routes': './routes',
           '@components': './_components',
           '@config': './_config',
+          '@helpers': './_helpers',
+          '@assets': './_assets',
           '@pages': './pages',
         },
       },

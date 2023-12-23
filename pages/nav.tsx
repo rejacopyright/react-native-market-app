@@ -1,13 +1,13 @@
 import colors from '@config/colors'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import NavRoutes from '@routes/nav'
+import NavRoutes from '@routes/navs'
 import { FC } from 'react'
 import { StatusBar, useColorScheme } from 'react-native'
 import { MD3DarkTheme, MD3LightTheme } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 const Tab = createBottomTabNavigator()
-const Index: FC<any> = ({ navigation }) => {
+const Index: FC<any> = ({ navigation: _ }) => {
   StatusBar.setBackgroundColor('pink', true)
   const colorScheme = useColorScheme()
   const paperTheme =

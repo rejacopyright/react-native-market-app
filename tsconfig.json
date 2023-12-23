@@ -4,7 +4,7 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@components": [
+      "@components/*": [
         "_components/*"
       ],
       "@pages/*": [
@@ -15,6 +15,15 @@
       ],
       "@config/*": [
         "_config/*"
+      ],
+      "@helpers": [
+        "_helpers"
+      ],
+      "@helpers/*": [
+        "_helpers/*"
+      ],
+      "@assets/*": [
+        "_assets/*"
       ],
     }
   },

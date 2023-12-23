@@ -22,7 +22,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 0,
     'react-native/no-color-literals': 0,
     'react-native/no-inline-styles': 0,
-    'react-native/no-unused-styles': 2,
+    'react-native/no-unused-styles': 1,
     'react-native/split-platform-components': 2,
     'react/no-unstable-nested-components': 0,
     'react/react-in-jsx-scope': 0,
@@ -32,7 +32,7 @@ module.exports = {
     // 'sort-keys': [2, 'asc', { caseSensitive: false, minKeys: 2, natural: false }],
     'unused-imports/no-unused-imports': 2,
     'unused-imports/no-unused-vars': [
-      0,
+      1,
       {
         args: 'after-used',
         argsIgnorePattern: '^_',

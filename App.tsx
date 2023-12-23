@@ -1,83 +1,39 @@
 import colors from '@config/colors'
-import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { mapRecursive } from '@helpers/index'
+import NavBar from '@pages/navBar'
 import PublicRoutes from '@routes/public'
 import { FC } from 'react'
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  useColorScheme,
-} from 'react-native'
-import { Col, Row } from 'react-native-easy-grid'
-import { MD3DarkTheme, MD3LightTheme, PaperProvider } from 'react-native-paper'
+import { SafeAreaView, StatusBar, StyleSheet } from 'react-native'
+import { configureFonts, MD3LightTheme, PaperProvider } from 'react-native-paper'
+import Icon from 'react-native-vector-icons/AntDesign'
+import { NativeRouter, Route, Routes } from 'react-router-native'
 
-// const Tab = createBottomTabNavigator()
-const Stack = createNativeStackNavigator()
-const App: FC<any> = ({ navigation }) => {
-  const colorScheme = useColorScheme()
-  const paperTheme =
-    colorScheme === 'dark'
-      ? { ...MD3DarkTheme, colors: colors.dark }
-      : { ...MD3LightTheme, colors: colors.light }
+const App: FC<any> = ({ navigation: _ }) => {
+  const fontConfig = {
+    fontFamily: 'Raleway',
+  }
+  const paperTheme: any = {
+    ...MD3LightTheme,
+    colors: colors.light,
+    fonts: configureFonts({ config: fontConfig }),
+  }
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={'light-content'} />
+      <StatusBar barStyle={'dark-content'} />
       <PaperProvider
         theme={paperTheme}
-        settings={
-          {
-            // icon: (props: any) => <Icon {...props} />,
-          }
-        }>
-        <NavigationContainer>
-          <Stack.Navigator
-            initialRouteName='Home'
-            screenOptions={() => {
-              // StatusBar.pushStackEntry({
-              //   backgroundColor: 'blue',
-              //   hidden: false,
-              //   barStyle: 'light-content',
-              // })
-              return {
-                headerShown: false,
-                lazy: true,
-                // freezeOnBlur: true,
-                tabBarActiveTintColor: paperTheme.colors.primary,
-                tabBarInactiveTintColor: 'gray',
-                tabBarShowLabel: true,
-                unmountOnBlur: true,
-              }
-            }}>
-            {/* <Stack.Screen name='Nav' component={NavPage} /> */}
-            {PublicRoutes?.map(({ name, title, component, icon }, key: number) => (
-              <Stack.Screen key={key} name={name} component={component} />
-            ))}
-          </Stack.Navigator>
-          <Row
-            style={{
-              flexWrap: 'nowrap',
-              height: 'auto',
-              paddingHorizontal: 5,
-              paddingVertical: 10,
-            }}>
-            <TouchableOpacity
-              onPress={() => {
-                console.log(Stack)
-                navigation?.navigate('Home')
-              }}>
-              <Text>NAV</Text>
-            </TouchableOpacity>
-            <Col style={{ alignItems: 'center' }} />
-            <Col style={{ alignItems: 'center' }}>
-              <TouchableOpacity onPress={() => navigation?.navigate('Profile')}>
-                <Text>NAV</Text>
-              </TouchableOpacity>
-            </Col>
-          </Row>
-        </NavigationContainer>
+        settings={{
+          icon: (props: any) => <Icon {...props} />,
+        }}>
+        <NativeRouter>
+          <Routes>
+            <Route path='/' Component={NavBar}>
+              {mapRecursive(PublicRoutes, ({ name, path, component }: any, key: number) => {
+                return <Route key={`${key}-${name}`} path={path} Component={component} />
+              })}
+            </Route>
+          </Routes>
+        </NativeRouter>
       </PaperProvider>
     </SafeAreaView>
   )

@@ -1,12 +1,23 @@
 import { FC } from 'react'
 import { StatusBar, StyleSheet, Text, View } from 'react-native'
+import { Button } from 'react-native-paper'
+import { useNavigate } from 'react-router-native'
 
-const Index: FC<any> = ({ navigation }) => {
-  StatusBar.setBackgroundColor('pink', true)
+const Index: FC<any> = ({ navigation: _ }) => {
+  StatusBar.setBackgroundColor('blue', true)
+  const navigate: any = useNavigate()
   return (
     <>
       <View style={styles.container}>
         <Text>Product Detail</Text>
+        <Button
+          icon='home'
+          mode='contained'
+          onPress={() => navigate(-1)}
+          // style={{ borderRadius: 5 }}
+        >
+          Back
+        </Button>
       </View>
     </>
   )
