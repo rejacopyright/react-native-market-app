@@ -20,6 +20,22 @@
     {
       "path": "_assets/fonts/Quicksand-700.ttf",
       "sha1": "07ca4486c80653a7f3abc18145c2f251d5c9989b"
+    },
+    {
+      "path": "_assets/icons/accessories.png",
+      "sha1": "6b52d8041fc3c066a06028b5df9af1706ddbf853"
+    },
+    {
+      "path": "_assets/icons/jacket.png",
+      "sha1": "246479d99377bbd88112f3f5ae844eb76d963147"
+    },
+    {
+      "path": "_assets/icons/pants.png",
+      "sha1": "eddf90b8451a31b3fbc2a9ce0579e51aca5fbc34"
+    },
+    {
+      "path": "_assets/icons/shirt.png",
+      "sha1": "6608ef6113989d4fcd318be719e3257539da1539"
     }
   ]
 }

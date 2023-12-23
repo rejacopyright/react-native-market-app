@@ -19,6 +19,10 @@
 		D91AFAE8BB4140C1878FFBBF /* Quicksand-500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D0AC0A92C6C483AA317D1DA /* Quicksand-500.ttf */; };
 		A9DCE3D391444521A6B553E0 /* Quicksand-600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA025CD6374447C69795CF7F /* Quicksand-600.ttf */; };
 		CD8C94E2DA3C4EB98BC3BD7A /* Quicksand-700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39CCE50A2D164B559822F791 /* Quicksand-700.ttf */; };
+		B9B803C19DA34AFB85E2802F /* accessories.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ACB28DD0AF74332B058C92D /* accessories.png */; };
+		BB219FDB209E4844BF8DB13E /* jacket.png in Resources */ = {isa = PBXBuildFile; fileRef = BB6736F54E0542F48E1B6A2F /* jacket.png */; };
+		0C9FBBFECF3F4A0AA5CC1E17 /* pants.png in Resources */ = {isa = PBXBuildFile; fileRef = A844FFA9D8C44EA4941A6A6B /* pants.png */; };
+		36FC275EB8A64CDA87E24609 /* shirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EDD20AD065843C8A2E62F86 /* shirt.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		9D0AC0A92C6C483AA317D1DA /* Quicksand-500.ttf */ = {isa = PBXFileReference; name = "Quicksand-500.ttf"; path = "../_assets/fonts/Quicksand-500.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		EA025CD6374447C69795CF7F /* Quicksand-600.ttf */ = {isa = PBXFileReference; name = "Quicksand-600.ttf"; path = "../_assets/fonts/Quicksand-600.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		39CCE50A2D164B559822F791 /* Quicksand-700.ttf */ = {isa = PBXFileReference; name = "Quicksand-700.ttf"; path = "../_assets/fonts/Quicksand-700.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5ACB28DD0AF74332B058C92D /* accessories.png */ = {isa = PBXFileReference; name = "accessories.png"; path = "../_assets/icons/accessories.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB6736F54E0542F48E1B6A2F /* jacket.png */ = {isa = PBXFileReference; name = "jacket.png"; path = "../_assets/icons/jacket.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A844FFA9D8C44EA4941A6A6B /* pants.png */ = {isa = PBXFileReference; name = "pants.png"; path = "../_assets/icons/pants.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4EDD20AD065843C8A2E62F86 /* shirt.png */ = {isa = PBXFileReference; name = "shirt.png"; path = "../_assets/icons/shirt.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,10 @@
 				9D0AC0A92C6C483AA317D1DA /* Quicksand-500.ttf */,
 				EA025CD6374447C69795CF7F /* Quicksand-600.ttf */,
 				39CCE50A2D164B559822F791 /* Quicksand-700.ttf */,
+				5ACB28DD0AF74332B058C92D /* accessories.png */,
+				BB6736F54E0542F48E1B6A2F /* jacket.png */,
+				A844FFA9D8C44EA4941A6A6B /* pants.png */,
+				4EDD20AD065843C8A2E62F86 /* shirt.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -272,6 +284,10 @@
 				D91AFAE8BB4140C1878FFBBF /* Quicksand-500.ttf in Resources */,
 				A9DCE3D391444521A6B553E0 /* Quicksand-600.ttf in Resources */,
 				CD8C94E2DA3C4EB98BC3BD7A /* Quicksand-700.ttf in Resources */,
+				B9B803C19DA34AFB85E2802F /* accessories.png in Resources */,
+				BB219FDB209E4844BF8DB13E /* jacket.png in Resources */,
+				0C9FBBFECF3F4A0AA5CC1E17 /* pants.png in Resources */,
+				36FC275EB8A64CDA87E24609 /* shirt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
