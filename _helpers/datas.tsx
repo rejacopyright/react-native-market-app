@@ -64,7 +64,7 @@ export const userList = [
 export const productsList = [
   {
     name: 'Men Returnable Jacket Bb Dc 2in1 Anti Air Parachute Fleece SIZE M L XL XXL',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 1.100.000',
     rating: 3,
     likes: 30,
@@ -73,7 +73,7 @@ export const productsList = [
   },
   {
     name: 'Trucker Men Jacket SIZE M-XXL COD',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 850.000',
     rating: 5,
     likes: 30,
@@ -82,7 +82,7 @@ export const productsList = [
   },
   {
     name: 'Mens Premium Screen Printed Denim Jean Jacket',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 1.250.000',
     rating: 1,
     likes: 30,
@@ -91,7 +91,7 @@ export const productsList = [
   },
   {
     name: 'Elmour Windproof Torque Series Softshell Motorcycle Jacket is Water and Wind Resistant',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 750.000',
     rating: 1,
     likes: 230,
@@ -100,7 +100,7 @@ export const productsList = [
   },
   {
     name: 'Harrington Jacket Windproof Waterproof Rexio Series',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 1.450.000',
     rating: 4,
     likes: 823,
@@ -109,7 +109,7 @@ export const productsList = [
   },
   {
     name: 'Daily Outdoor Jacket Hike Series Black Grey',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 650.000',
     rating: 2,
     likes: 765,
@@ -118,7 +118,7 @@ export const productsList = [
   },
   {
     name: 'Triple F Outdoor Waterproof jacket/men parachute jacket/motorcycle jacket/mountain jacket/hiking jacket',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 650.000',
     rating: 3,
     likes: 334,
@@ -127,7 +127,7 @@ export const productsList = [
   },
   {
     name: 'Men Motorcycle Jacket, Premium Bonding Material, Windproof Jacket, Suitable for Touring or Original Restart Style',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 1.650.000',
     rating: 4,
     likes: 221,
@@ -136,7 +136,7 @@ export const productsList = [
   },
   {
     name: 'Premium Outdoor Indoor Winter Waterproof Semi Jacket',
-    descripition: 'Lorem ipsum is placeholder text commonly used in the graphic',
+    description: 'Lorem ipsum is placeholder text commonly used in the graphic',
     price: 'Rp. 1.650.000',
     rating: 5,
     likes: 169,

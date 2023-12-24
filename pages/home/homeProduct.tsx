@@ -1,4 +1,3 @@
-import colors from '@config/colors'
 import { productsList } from '@helpers/datas'
 import React, { FC } from 'react'
 import { Dimensions, Image, StyleSheet, TouchableOpacity, View } from 'react-native'
@@ -6,6 +5,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid'
 import { Text } from 'react-native-paper'
 import { AirbnbRating as RatingAirbnb, TapRatingProps } from 'react-native-ratings'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { useNavigate } from 'react-router-native'
 
 interface RatingProps extends TapRatingProps {
   unSelectedColor?: string
@@ -13,12 +13,13 @@ interface RatingProps extends TapRatingProps {
 const AirbnbRating: FC<RatingProps> = (props) => RatingAirbnb(props)
 
 const HomeProduct: FC<any> = () => {
+  const navigate: any = useNavigate()
   const deviceWidth: any = Math.floor(Dimensions.get('window').width)
   const gridX: any = deviceWidth / 2 - 5
   return (
     <Grid style={{ flexWrap: 'wrap', padding: 5, marginTop: 10 }}>
       {productsList
-        ?.slice(0, 6)
+        ?.slice(2, 8)
         ?.map(({ name, price, src, rating, sold, likes }: any, index: number) => (
           <Col
             key={index}
@@ -30,7 +31,7 @@ const HomeProduct: FC<any> = () => {
             <View style={styles.card}>
               <TouchableOpacity
                 activeOpacity={0.75}
-                onPress={() => ''}
+                onPress={() => navigate('/product/detail')}
                 style={[styles.cardContent, styles.shadow]}>
                 <Image
                   style={[
@@ -60,7 +61,7 @@ const HomeProduct: FC<any> = () => {
                   </Text>
                   <Text
                     style={{
-                      color: colors.light.primary,
+                      // color: colors.light.primary,
                       fontSize: 14,
                       fontFamily: 'Quicksand-700',
                       textAlign: 'center',

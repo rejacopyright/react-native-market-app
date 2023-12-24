@@ -1,6 +1,7 @@
 import { PageLoaderCircle } from '@components/loader'
 import colors from '@config/colors'
-import { FC, Suspense, useEffect } from 'react'
+import { GlobalStore } from '@config/stores'
+import { FC, Suspense, useContext, useEffect } from 'react'
 import { Alert, BackHandler, StyleSheet, View } from 'react-native'
 import { Col, Row } from 'react-native-easy-grid'
 import { Text, TouchableRipple } from 'react-native-paper'
@@ -16,6 +17,7 @@ const menu: any = [
 ]
 
 const Index: FC<any> = () => {
+  const stores: any = useContext(GlobalStore)
   const navigate: any = useNavigate()
   const { pathname }: any = useLocation()
   useEffect(() => {
@@ -53,10 +55,11 @@ const Index: FC<any> = () => {
         style={{
           flexWrap: 'nowrap',
           height: 'auto',
-          backgroundColor: '#fff',
+          backgroundColor: '#f7f7f7',
           alignSelf: 'flex-end',
           alignItems: 'flex-end',
           alignContent: 'flex-end',
+          display: stores?.store?.bottomNav ? 'flex' : 'none',
           // borderTopWidth: 1,
           // borderTopColor: '#eee',
           elevation: 10,
@@ -64,7 +67,7 @@ const Index: FC<any> = () => {
         {menu?.map(({ name, path, icon }: any, idx: number) => {
           const activePath: any = path !== '/' ? pathname?.startsWith(path) : pathname === '/'
           return (
-            <Col key={idx}>
+            <Col key={idx} style={{ position: 'relative', overflow: 'hidden' }}>
               <TouchableRipple
                 rippleColor='rgba(0, 0, 0, .05)'
                 style={{
@@ -77,6 +80,21 @@ const Index: FC<any> = () => {
                   navigate(path)
                 }}>
                 <>
+                  {activePath && (
+                    <View
+                      style={{
+                        position: 'absolute',
+                        width: 25,
+                        alignSelf: 'center',
+                        alignContent: 'center',
+                        alignItems: 'center',
+                        height: 10,
+                        borderRadius: 10,
+                        top: -5,
+                        backgroundColor: colors.light.primary,
+                      }}
+                    />
+                  )}
                   <View
                     style={{
                       width: 35,
@@ -89,7 +107,7 @@ const Index: FC<any> = () => {
                     }}>
                     <AntIcon
                       name={icon}
-                      size={activePath ? 20 : 25}
+                      size={activePath ? 17 : 20}
                       color={activePath ? 'white' : colors.light.primary}
                     />
                   </View>

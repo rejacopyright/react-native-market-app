@@ -14,3 +14,7 @@ export const mapRecursive: any = (oldArray: any, callback: any, newArray: any = 
     return mapRecursive(rest, callback, interimArray)
   }
 }
+
+export const randomInt: any = (min: number, max: number) => {
+  return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min)
+}

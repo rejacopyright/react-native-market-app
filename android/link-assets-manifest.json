@@ -26,6 +26,10 @@
       "sha1": "6b52d8041fc3c066a06028b5df9af1706ddbf853"
     },
     {
+      "path": "_assets/icons/box.png",
+      "sha1": "d5c006c1f31a1dcfbe6ffaa2da32fdf2d0c26197"
+    },
+    {
       "path": "_assets/icons/jacket.png",
       "sha1": "246479d99377bbd88112f3f5ae844eb76d963147"
     },
@@ -36,6 +40,14 @@
     {
       "path": "_assets/icons/ransel.png",
       "sha1": "ca176dc63799456dcf6acf55905c2083c2f8cec5"
+    },
+    {
+      "path": "_assets/icons/review.png",
+      "sha1": "77d363f265aa4244c110381da28cfc930fb27be8"
+    },
+    {
+      "path": "_assets/icons/scooter.png",
+      "sha1": "f8ee1c53296dc3e23d5d74603b4a06fdfb412a05"
     },
     {
       "path": "_assets/icons/shirt.png",
@@ -64,6 +76,10 @@
     {
       "path": "_assets/icons/user_6.png",
       "sha1": "96422d1fb17a7f619c812c251ec1567ef3f20dda"
+    },
+    {
+      "path": "_assets/icons/wallet.png",
+      "sha1": "8061e9005238c78c353ebf55fdaa66717be5b11d"
     },
     {
       "path": "_assets/images/home_banner_1.jpg",

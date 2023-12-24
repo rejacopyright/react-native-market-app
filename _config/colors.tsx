@@ -71,7 +71,7 @@ export default {
     onTertiaryContainer: 'rgb(50, 16, 23)',
     outline: 'rgb(124, 117, 126)',
     outlineVariant: 'rgb(204, 196, 206)',
-    primary: 'rgb(120, 69, 172)',
+    primary: 'rgb(120, 100, 200)',
     primaryContainer: 'rgba(240, 219, 255, 0.25)',
     primaryContainer1: 'rgba(240, 219, 255, 0.5)',
     primaryContainer2: 'rgba(240, 219, 255, 0.75)',
