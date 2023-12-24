@@ -4,6 +4,7 @@ import { lazy } from 'react'
 const ProductDetail: any = lazy(() => import('@pages/product/detail'))
 const Home: any = lazy(() => import('@pages/home'))
 const Chat: any = lazy(() => import('@pages/chat'))
+const ChatDetail: any = lazy(() => import('@pages/chat/detail'))
 const Likes: any = lazy(() => import('@pages/likes'))
 const Cart: any = lazy(() => import('@pages/cart'))
 const Profile: any = lazy(() => import('@pages/profile'))
@@ -15,6 +16,7 @@ interface Props {
 const publicRoutes: Array<Props> = [
   { path: '/', component: Home },
   { path: '/chat', component: Chat },
+  { path: '/chat/detail', component: ChatDetail },
   { path: '/likes', component: Likes },
   { path: '/cart', component: Cart },
   { path: 'profile', component: Profile },

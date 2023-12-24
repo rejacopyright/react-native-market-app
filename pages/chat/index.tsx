@@ -1,12 +1,15 @@
 import { PageLoaderCircle } from '@components/loader'
+import { randomInt } from '@helpers'
 import { userList } from '@helpers/datas'
 import { FC, useEffect, useState } from 'react'
 import { Image, SafeAreaView, ScrollView, TextInput, View } from 'react-native'
 import { Col, Row } from 'react-native-easy-grid'
 import { Text, TouchableRipple } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/AntDesign'
+import { useNavigate } from 'react-router-native'
 
 const Index: FC<any> = ({ navigation: _ }) => {
+  const navigate: any = useNavigate()
   const [data, setData] = useState<any>([])
   const [loading, setLoading] = useState<any>(true)
 
@@ -54,7 +57,7 @@ const Index: FC<any> = ({ navigation: _ }) => {
             <TouchableRipple
               key={idx}
               rippleColor='rgba(0, 0, 0, .05)'
-              onPress={() => ''}
+              onPress={() => navigate('/chat/detail')}
               style={{ padding: 15 }}>
               <Row style={{ alignItems: 'center' }}>
                 <Row>
@@ -73,9 +76,24 @@ const Index: FC<any> = ({ navigation: _ }) => {
                     </Text>
                   </Col>
                 </Row>
-                <Text style={{ fontFamily: 'Quicksand-700', fontSize: 12, marginLeft: 10 }}>
-                  11:30
-                </Text>
+                <View style={{ marginLeft: 10, alignItems: 'center' }}>
+                  <Text style={{ fontFamily: 'Quicksand-700', fontSize: 12 }}>11:30</Text>
+                  {randomInt(1, 2) === 1 && (
+                    <Text
+                      style={{
+                        fontFamily: 'Quicksand-700',
+                        fontSize: 12,
+                        lineHeight: 16,
+                        color: '#fff',
+                        paddingHorizontal: 5,
+                        paddingVertical: 1,
+                        borderRadius: 5,
+                        backgroundColor: 'mediumvioletred',
+                      }}>
+                      {randomInt(1, 99)}
+                    </Text>
+                  )}
+                </View>
               </Row>
             </TouchableRipple>
           )
