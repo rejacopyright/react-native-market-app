@@ -4,6 +4,7 @@ import { ScrollView, StatusBar, View } from 'react-native'
 import HomeCategory from './homeCategory'
 import HomeProduct from './homeProduct'
 import HomeSlider from './homeSlider'
+import HomeTopUser from './homeTopUser'
 
 const Index: FC<any> = ({ navigation: _ }) => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const Index: FC<any> = ({ navigation: _ }) => {
       <View>
         <HomeSlider />
         <HomeCategory />
+        <HomeTopUser />
         <HomeProduct />
       </View>
     </ScrollView>

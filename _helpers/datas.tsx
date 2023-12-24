@@ -1,3 +1,40 @@
+export const topUserList = [
+  {
+    name: 'Reja Jamil',
+    level: 'Super',
+    rating: 3,
+    sold: 33,
+    avatar: require('@assets/icons/user_1.png'),
+  },
+  {
+    name: 'Reja Jamil',
+    level: 'Mall',
+    rating: 5,
+    sold: 54,
+    avatar: require('@assets/icons/user_5.png'),
+  },
+  {
+    name: 'Reja Jamil',
+    level: 'Silver',
+    rating: 1,
+    sold: 24,
+    avatar: require('@assets/icons/user_3.png'),
+  },
+  {
+    name: 'Reja Jamil',
+    level: 'Gold',
+    rating: 1,
+    sold: 11,
+    avatar: require('@assets/icons/user_4.png'),
+  },
+  {
+    name: 'Reja Jamil',
+    level: 'Platinum',
+    rating: 4,
+    sold: 240,
+    avatar: require('@assets/icons/user_2.png'),
+  },
+]
 export const productsList = [
   {
     name: 'Lorem ipsum is placeholder',

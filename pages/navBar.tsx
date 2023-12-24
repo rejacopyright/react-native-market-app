@@ -1,16 +1,19 @@
+import { PageLoaderCircle } from '@components/loader'
+import colors from '@config/colors'
 import { FC, Suspense, useEffect } from 'react'
 import { Alert, BackHandler, StyleSheet, View } from 'react-native'
 import { Col, Row } from 'react-native-easy-grid'
-import { ActivityIndicator, Text, TouchableRipple } from 'react-native-paper'
+import { Text, TouchableRipple } from 'react-native-paper'
+import AntIcon from 'react-native-vector-icons/AntDesign'
 import { Outlet, useLocation, useNavigate } from 'react-router-native'
 
-const PageLoader: FC<any> = () => {
-  return (
-    <View style={styles.pageLoader}>
-      <ActivityIndicator animating={true} hidesWhenStopped={false} />
-    </View>
-  )
-}
+const menu: any = [
+  { name: 'Home', path: '/', icon: 'home' },
+  { name: 'Chat', path: '/chat', icon: 'message1' },
+  { name: 'Likes', path: '/likes', icon: 'hearto' },
+  { name: 'Cart', path: '/cart', icon: 'shoppingcart' },
+  { name: 'Profile', path: '/profile', icon: 'user' },
+]
 
 const Index: FC<any> = () => {
   const navigate: any = useNavigate()
@@ -40,7 +43,7 @@ const Index: FC<any> = () => {
 
   return (
     <View style={styles.container}>
-      <Suspense fallback={<PageLoader />}>
+      <Suspense fallback={<PageLoaderCircle />}>
         <View style={styles.container}>
           <Outlet />
         </View>
@@ -50,52 +53,54 @@ const Index: FC<any> = () => {
         style={{
           flexWrap: 'nowrap',
           height: 'auto',
-          backgroundColor: '#eee',
+          backgroundColor: '#fff',
           alignSelf: 'flex-end',
           alignItems: 'flex-end',
           alignContent: 'flex-end',
+          // borderTopWidth: 1,
+          // borderTopColor: '#eee',
+          elevation: 10,
         }}>
-        <Col>
-          <TouchableRipple
-            rippleColor='rgba(0, 0, 0, .05)'
-            style={{
-              width: '100%',
-              alignItems: 'center',
-              paddingHorizontal: 5,
-              paddingVertical: 10,
-            }}
-            onPress={() => {
-              navigate('/')
-            }}>
-            <Text>NAV</Text>
-          </TouchableRipple>
-        </Col>
-        <Col>
-          <TouchableRipple
-            rippleColor='rgba(0, 0, 0, .05)'
-            style={{
-              width: '100%',
-              alignItems: 'center',
-              paddingHorizontal: 5,
-              paddingVertical: 10,
-            }}
-            onPress={() => navigate('/profile')}>
-            <Text>NAV</Text>
-          </TouchableRipple>
-        </Col>
-        <Col>
-          <TouchableRipple
-            rippleColor='rgba(0, 0, 0, .05)'
-            style={{
-              width: '100%',
-              alignItems: 'center',
-              paddingHorizontal: 5,
-              paddingVertical: 10,
-            }}
-            onPress={() => navigate('/profile')}>
-            <Text>NAV</Text>
-          </TouchableRipple>
-        </Col>
+        {menu?.map(({ name, path, icon }: any, idx: number) => {
+          const activePath: any = path !== '/' ? pathname?.startsWith(path) : pathname === '/'
+          return (
+            <Col key={idx}>
+              <TouchableRipple
+                rippleColor='rgba(0, 0, 0, .05)'
+                style={{
+                  width: '100%',
+                  alignItems: 'center',
+                  paddingHorizontal: 5,
+                  paddingVertical: 10,
+                }}
+                onPress={() => {
+                  navigate(path)
+                }}>
+                <>
+                  <View
+                    style={{
+                      width: 35,
+                      height: 35,
+                      borderRadius: 40,
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      backgroundColor: activePath ? colors.light.primary : 'transparent',
+                      paddingBottom: activePath ? 2.5 : 0,
+                    }}>
+                    <AntIcon
+                      name={icon}
+                      size={activePath ? 20 : 25}
+                      color={activePath ? 'white' : colors.light.primary}
+                    />
+                  </View>
+                  <Text numberOfLines={1} style={{ fontSize: 11 }}>
+                    {name}
+                  </Text>
+                </>
+              </TouchableRipple>
+            </Col>
+          )
+        })}
       </Row>
     </View>
   )
@@ -107,12 +112,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
     justifyContent: 'space-between',
-  },
-  pageLoader: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    flex: 1,
-    justifyContent: 'center',
   },
 })
 

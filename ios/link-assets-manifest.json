@@ -34,8 +34,36 @@
       "sha1": "eddf90b8451a31b3fbc2a9ce0579e51aca5fbc34"
     },
     {
+      "path": "_assets/icons/ransel.png",
+      "sha1": "ca176dc63799456dcf6acf55905c2083c2f8cec5"
+    },
+    {
       "path": "_assets/icons/shirt.png",
       "sha1": "6608ef6113989d4fcd318be719e3257539da1539"
+    },
+    {
+      "path": "_assets/icons/user_1.png",
+      "sha1": "362116328b3df1fd68dcedfc18093cf9748e7c60"
+    },
+    {
+      "path": "_assets/icons/user_2.png",
+      "sha1": "cb80e8fa12a68be729526707d27a206b34218c9d"
+    },
+    {
+      "path": "_assets/icons/user_3.png",
+      "sha1": "e7f346882b585a1ca2468e00a95acb2c7ea26732"
+    },
+    {
+      "path": "_assets/icons/user_4.png",
+      "sha1": "b0bb9874d03cdf50bca8656191c04e7d028241a7"
+    },
+    {
+      "path": "_assets/icons/user_5.png",
+      "sha1": "2d6a6a7f02f863cf0a154c913cd084978ba160c5"
+    },
+    {
+      "path": "_assets/icons/user_6.png",
+      "sha1": "96422d1fb17a7f619c812c251ec1567ef3f20dda"
     }
   ]
 }

@@ -1,4 +1,4 @@
-// import Home from '@pages/home'
+import { PageNotFound } from '@components/page'
 import { lazy } from 'react'
 import glyphMap from 'react-native-vector-icons/glyphmaps/Ionicons.json'
 
@@ -7,12 +7,12 @@ const Profile: any = lazy(() => import('@pages/profile'))
 const Home: any = lazy(() => import('@pages/home'))
 interface Props {
   component?: any
-  icon: {
+  icon?: {
     active: keyof typeof glyphMap
     inactive: keyof typeof glyphMap
   }
-  name: string
-  title: string
+  name?: string
+  title?: string
   path?: string
   children?: Array<Props>
 }
@@ -39,6 +39,7 @@ const publicRoutes: Array<Props> = [
     name: 'Product Detail',
     title: 'Product Detail',
   },
+  { component: PageNotFound, path: '*' },
 ]
 
 export default publicRoutes
