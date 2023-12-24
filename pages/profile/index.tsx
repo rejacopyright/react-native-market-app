@@ -1,14 +1,9 @@
-import { PageLoaderCircle } from '@components/loader'
-import { FC, useCallback, useEffect, useState } from 'react'
+import { FC, useCallback, useEffect } from 'react'
 import { ScrollView, StatusBar, View } from 'react-native'
 
-import HomeCategory from './homeCategory'
-import HomeProduct from './homeProduct'
-import HomeSlider from './homeSlider'
-import HomeTopUser from './homeTopUser'
+import ProfileHeader from './profileHeader'
 
 const Index: FC<any> = ({ navigation: _ }) => {
-  const [loading, setLoading] = useState<any>(true)
   StatusBar.setTranslucent(true)
   useEffect(() => {
     StatusBar.setBackgroundColor('transparent', false)
@@ -25,15 +20,6 @@ const Index: FC<any> = ({ navigation: _ }) => {
       return StatusBar.setBackgroundColor('transparent', false)
     }
   }, [])
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 100)
-  }, [])
-
-  if (loading) {
-    return <PageLoaderCircle />
-  }
   return (
     <ScrollView
       onScroll={onScroll}
@@ -43,10 +29,7 @@ const Index: FC<any> = ({ navigation: _ }) => {
       alwaysBounceVertical={false}
       bounces={false}>
       <View>
-        <HomeSlider />
-        <HomeCategory />
-        <HomeTopUser />
-        <HomeProduct />
+        <ProfileHeader />
       </View>
     </ScrollView>
   )

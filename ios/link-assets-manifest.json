@@ -64,6 +64,34 @@
     {
       "path": "_assets/icons/user_6.png",
       "sha1": "96422d1fb17a7f619c812c251ec1567ef3f20dda"
+    },
+    {
+      "path": "_assets/images/home_banner_1.jpg",
+      "sha1": "72f1cb2c40ba57dcba6e6af4cdab9b9551b98f29"
+    },
+    {
+      "path": "_assets/images/home_banner_2.jpg",
+      "sha1": "3a354e4eccab9f4ca7cdba2ca4b637553c833485"
+    },
+    {
+      "path": "_assets/images/home_banner_3.jpg",
+      "sha1": "fe46a75a1cbd8559b1eff117960f99596d93dd9a"
+    },
+    {
+      "path": "_assets/images/no_image.png",
+      "sha1": "9948ecc78b60e8d9e994faa2a0b01e4599a883cb"
+    },
+    {
+      "path": "_assets/images/shape_1.png",
+      "sha1": "7ba6d4e8203fb22579e4bff623fbe407ab2203b4"
+    },
+    {
+      "path": "_assets/images/shape_2.png",
+      "sha1": "2ea0074f5587fed3c434e14e13979bd497306ec1"
+    },
+    {
+      "path": "_assets/images/shape_3.png",
+      "sha1": "31aa9e2c288e4f782f93620ed6ed34eb38b83097"
     }
   ]
 }

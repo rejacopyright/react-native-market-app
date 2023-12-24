@@ -5,7 +5,7 @@ import { ActivityIndicator } from 'react-native-paper'
 export const PageLoaderCircle = () => {
   return (
     <View style={styles.pageLoader}>
-      <ActivityIndicator animating={true} hidesWhenStopped={false} />
+      <ActivityIndicator animating={true} hidesWhenStopped={true} />
     </View>
   )
 }

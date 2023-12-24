@@ -27,8 +27,8 @@ const App: FC<any> = ({ navigation: _ }) => {
         <NativeRouter>
           <Routes>
             <Route path='/' Component={NavBar}>
-              {mapRecursive(PublicRoutes, ({ name, path, component }: any, key: number) => {
-                return <Route key={`${key}-${name}`} path={path} Component={component} />
+              {mapRecursive(PublicRoutes, ({ path, component }: any, key: number) => {
+                return <Route key={`${key}-${path}`} path={path} Component={component} />
               })}
             </Route>
           </Routes>

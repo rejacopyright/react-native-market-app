@@ -1,6 +1,7 @@
 import Home from '@pages/home'
 import Profile from '@pages/profile'
 import glyphMap from 'react-native-vector-icons/glyphmaps/Ionicons.json'
+// import glyphMap from 'react-native-vector-icons/glyphmaps/AntDesign.json'
 
 interface Props {
   component: any
