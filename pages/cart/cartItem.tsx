@@ -6,8 +6,10 @@ import { Col, Row } from 'react-native-easy-grid'
 import { Text, TouchableRipple } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/AntDesign'
 import FAIcon from 'react-native-vector-icons/FontAwesome'
+import { useNavigate } from 'react-router-native'
 
 const CartItem: FC<any> = ({ data }) => {
+  const navigate: any = useNavigate()
   const [item, setItem] = useState<any>({})
   const isChecked: any = randomInt(1, 2) === 1
   useEffect(() => {
@@ -16,7 +18,7 @@ const CartItem: FC<any> = ({ data }) => {
   return (
     <TouchableRipple
       rippleColor='rgba(0, 0, 0, .05)'
-      onPress={() => ''}
+      onPress={() => navigate('/product/detail')}
       style={{ paddingHorizontal: 15 }}>
       <View
         style={{

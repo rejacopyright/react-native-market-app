@@ -2,7 +2,7 @@ import { PageLoaderCircle } from '@components/loader'
 import { GlobalStore } from '@config/stores'
 import { productsList } from '@helpers/datas'
 import { FC, useContext, useEffect, useState } from 'react'
-import { ScrollView, View } from 'react-native'
+import { ScrollView, TouchableOpacity, View } from 'react-native'
 import { Appbar } from 'react-native-paper'
 import { useNavigate } from 'react-router-native'
 
@@ -43,13 +43,17 @@ const Index: FC<any> = ({ navigation: _ }) => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ paddingBottom: 10 }} />
         <View style={{ marginVertical: 15 }}>
-          <CartUser data={{ name: 'Alpha Mart', badge: 'Super' }} />
+          <TouchableOpacity activeOpacity={0.75} onPress={() => navigate('/profile')}>
+            <CartUser data={{ name: 'Alpha Mart', badge: 'Super' }} />
+          </TouchableOpacity>
           {data?.slice(0, 2)?.map((e: any, idx: number) => {
             return <CartItem key={idx} data={e} />
           })}
         </View>
         <View style={{ marginVertical: 15 }}>
-          <CartUser data={{ name: 'Beta Mart', badge: 'Gold' }} />
+          <TouchableOpacity activeOpacity={0.75} onPress={() => navigate('/profile')}>
+            <CartUser data={{ name: 'Beta Mart', badge: 'Gold' }} />
+          </TouchableOpacity>
           {data?.slice(2, 6)?.map((e: any, idx: number) => {
             return <CartItem key={idx} data={e} />
           })}

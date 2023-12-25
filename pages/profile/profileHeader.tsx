@@ -2,8 +2,10 @@ import { Image, View } from 'react-native'
 import { Row } from 'react-native-easy-grid'
 import { Button, Text } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/AntDesign'
+import { useNavigate } from 'react-router-native'
 
 const ProfileHeader = () => {
+  const navigate: any = useNavigate()
   return (
     <View style={{ paddingTop: 50 }}>
       <Row style={{ justifyContent: 'center' }}>
@@ -49,7 +51,7 @@ const ProfileHeader = () => {
             <Button
               icon='setting'
               mode='elevated'
-              onPress={() => ''}
+              onPress={() => navigate('/profile/edit')}
               labelStyle={{ fontSize: 12, lineHeight: 13, fontFamily: 'Quicksand-700' }}
               style={{ marginBottom: 5 }}>
               Edit Profile

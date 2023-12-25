@@ -3,8 +3,10 @@ import { View } from 'react-native'
 import { Row } from 'react-native-easy-grid'
 import { Button, Text } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { useNavigate } from 'react-router-native'
 
 const SubmitCard = () => {
+  const navigate: any = useNavigate()
   return (
     <>
       <View
@@ -66,7 +68,7 @@ const SubmitCard = () => {
           <Button
             icon={() => <Icon name='check-circle' size={15} color='#fff' />}
             mode='contained'
-            onPress={() => ''}
+            onPress={() => navigate('/checkout')}
             labelStyle={{ fontFamily: 'Quicksand-700' }}>
             Checkout
           </Button>

@@ -35,7 +35,7 @@ const ProductSlider: FC<any> = () => {
         contentContainerStyle={styles.contentStyle}
         itemStyle={styles.itemStyle}
       />
-      <Row style={{ paddingHorizontal: 5 }}>
+      <Row style={{ paddingHorizontal: 5, marginVertical: 5 }}>
         {images?.map(({ image }: any, idx: number) => {
           return (
             <View key={idx} style={{ paddingHorizontal: 5, paddingVertical: 5 }}>

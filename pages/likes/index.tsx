@@ -6,6 +6,7 @@ import { Col, Row } from 'react-native-easy-grid'
 import { Text, TouchableRipple } from 'react-native-paper'
 import { AirbnbRating as RatingAirbnb, TapRatingProps } from 'react-native-ratings'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { useNavigate } from 'react-router-native'
 
 interface RatingProps extends TapRatingProps {
   unSelectedColor?: string
@@ -13,6 +14,7 @@ interface RatingProps extends TapRatingProps {
 const AirbnbRating: FC<RatingProps> = (props) => RatingAirbnb(props)
 
 const Index: FC<any> = ({ navigation: _ }) => {
+  const navigate: any = useNavigate()
   const [data, setData] = useState<any>([])
   const [loading, setLoading] = useState<any>(true)
 
@@ -35,7 +37,7 @@ const Index: FC<any> = ({ navigation: _ }) => {
             <TouchableRipple
               key={idx}
               rippleColor='rgba(0, 0, 0, .05)'
-              onPress={() => ''}
+              onPress={() => navigate('/product/detail')}
               style={{ paddingHorizontal: 15, paddingVertical: 20 }}>
               <Row>
                 <Image

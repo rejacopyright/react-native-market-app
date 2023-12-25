@@ -5,6 +5,7 @@ import { Col, Grid, Row } from 'react-native-easy-grid'
 import { Text } from 'react-native-paper'
 import { AirbnbRating as RatingAirbnb, TapRatingProps } from 'react-native-ratings'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import { useNavigate } from 'react-router-native'
 
 interface RatingProps extends TapRatingProps {
   unSelectedColor?: string
@@ -12,6 +13,7 @@ interface RatingProps extends TapRatingProps {
 const AirbnbRating: FC<RatingProps> = (props) => RatingAirbnb(props)
 
 const ProductLastSeen: FC<any> = () => {
+  const navigate: any = useNavigate()
   const deviceWidth: any = Math.floor(Dimensions.get('window').width)
   const gridX: any = deviceWidth / 3
 
@@ -65,7 +67,7 @@ const ProductLastSeen: FC<any> = () => {
               <View style={styles.card}>
                 <TouchableOpacity
                   activeOpacity={0.75}
-                  onPress={() => ''}
+                  onPress={() => navigate('/product/detail')}
                   style={[styles.cardContent, styles.shadow]}>
                   <Image
                     style={[
